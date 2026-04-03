@@ -35,5 +35,58 @@ Meant for agentic coding with `PLAN.md`driven execution. Agents should load only
 
 ### Windsurf
 
-- **windows** - ~\.codeium/windsurf
-- **linux** - ~/.codeium/windsurf
+- **windows** - ~\.codeium\windsurf\global_workflows
+- **linux** - ~/.codeium/windsurf/global_workflows
+
+#### Windows Installation
+
+```powershell
+# Create global windsurf directories
+mkdir "$env:USERPROFILE\.codeium\windsurf\global_workflows"
+mkdir "$env:USERPROFILE\.codeium\windsurf\skills"
+
+# Copy skills and workflows
+Copy-Item -Recurse "windsurf\skills\*" "$env:USERPROFILE\.codeium\windsurf\skills\"
+Copy-Item "windsurf\workflows\*" "$env:USERPROFILE\.codeium\windsurf\global_workflows\"
+
+# Copy global rules
+Copy-Item "windsurf\global_rules.md" "$env:USERPROFILE\.codeium\windsurf\"
+```
+
+#### Linux Installation
+
+```bash
+# Create global windsurf directories
+mkdir -p ~/.codeium/windsurf/global_workflows
+mkdir -p ~/.codeium/windsurf/skills
+
+# Copy skills and workflows
+cp -r windsurf/skills/* ~/.codeium/windsurf/skills/
+cp windsurf/workflows/* ~/.codeium/windsurf/global_workflows/
+
+# Copy global rules
+cp windsurf/global_rules.md ~/.codeium/windsurf/
+```
+
+## Project-Level Usage
+
+For project-specific configuration, place files in:
+
+### Opencode
+
+```
+your-project/
+├── .opencode/
+│   ├── skills/
+│   └── agents/
+```
+
+### Windsurf
+
+```
+your-project/
+├── .windsurf/
+│   ├── workflows/
+│   ├── skills/
+│   └── global_rules.md
+```

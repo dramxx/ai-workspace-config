@@ -1,5 +1,6 @@
 ---
-description: Structure complex questions into testable hypotheses using MECE framework
+name: hypothesis-tree
+description: Structure complex questions into testable hypotheses. Use when validating product ideas, debugging problems, planning experiments, or breaking down ambiguous challenges into actionable research.
 ---
 
 # Hypothesis Tree - Structured Problem Decomposition

@@ -1,5 +1,6 @@
 ---
-description: React/Next.js/TypeScript project organization using feature-based architecture
+name: project-structure
+description: Guides React/Next.js/TypeScript project organization using feature-based architecture. Use when structuring new projects, reorganizing codebases, or deciding where to place new code.
 ---
 
 # Project Structure: Feature-Based Architecture

@@ -1,5 +1,6 @@
 ---
-description: Expert Godot 4 game development guidance covering GDScript patterns, scene architecture, and project structure
+name: godot-best-practices
+description: Expert Godot 4 game development guidance covering GDScript patterns, scene architecture, signals, performance, and project structure. Use this skill when writing GDScript, designing scene trees, working with signals/autoloads/resources, implementing game systems (state machines, inventory, combat, UI), debugging Godot-specific issues, or structuring any Godot 4 project. Always trigger for any Godot or GDScript-related task, even if the user just mentions a `.gd` file, a node type, or a game mechanic they want to implement.
 ---
 
 # Godot 4 Best Practices

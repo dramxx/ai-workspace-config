@@ -1,5 +1,6 @@
 ---
-description: Language-agnostic naming conventions using the A/HC/LC pattern
+name: naming-cheatsheet
+description: Apply language-agnostic naming conventions using the A/HC/LC pattern. Use when naming variables, functions, or reviewing code for naming consistency.
 ---
 
 # Naming Cheatsheet
@@ -28,6 +29,8 @@ const shouldPaginate = postCount > 10
 
 ## The A/HC/LC Pattern
 
+The core pattern for naming functions:
+
 ```
 prefix? + action (A) + high context (HC) + low context? (LC)
 ```
@@ -44,6 +47,7 @@ prefix? + action (A) + high context (HC) + low context? (LC)
 ## Actions (Verbs)
 
 ### `get`
+
 Accesses data immediately (shorthand getter). Also used for async operations.
 
 ```javascript
@@ -58,6 +62,7 @@ async function getUser(id) {
 ```
 
 ### `set`
+
 Sets a variable declaratively, from value A to value B.
 
 ```javascript
@@ -69,6 +74,7 @@ function setFruits(nextFruits) {
 ```
 
 ### `reset`
+
 Sets a variable back to its initial value or state.
 
 ```javascript
@@ -99,7 +105,10 @@ function deletePost(id) {
 }
 ```
 
+**Key insight:** `add` needs a destination, `create` does not. Pair `remove` with `add`, `delete` with `create`.
+
 ### `compose`
+
 Creates new data from existing data.
 
 ```javascript
@@ -109,6 +118,7 @@ function composePageUrl(pageName, pageId) {
 ```
 
 ### `handle`
+
 Handles an action, often used for callback methods.
 
 ```javascript
@@ -144,6 +154,19 @@ const hasProducts = productsCount > 0
 |--------|-------|---------|
 | `min`/`max` | Minimum or maximum value | `minPosts`, `maxRetries` |
 | `prev`/`next` | Previous or next state | `prevPosts`, `nextPosts` |
+
+```javascript
+function renderPosts(posts, minPosts, maxPosts) {
+  return posts.slice(0, randomBetween(minPosts, maxPosts))
+}
+
+async function getPosts() {
+  const prevPosts = this.state.posts
+  const latestPosts = await fetch('...')
+  const nextPosts = concat(prevPosts, latestPosts)
+  this.setState({ posts: nextPosts })
+}
+```
 
 ## Rules to Follow
 

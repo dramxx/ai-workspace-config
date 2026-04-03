@@ -1,5 +1,6 @@
 ---
-description: Guide when to abstract vs duplicate code and avoid wrong abstractions
+name: code-architecture
+description: Guides when to abstract vs duplicate code. Use this skill when creating shared utilities, deciding between DRY/WET approaches, or refactoring existing abstractions.
 ---
 
 # Code Architecture: Avoiding Wrong Abstractions

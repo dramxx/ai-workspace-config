@@ -1,5 +1,6 @@
 ---
-description: Expert Rust CLI application development covering project structure, error handling, and argument parsing
+name: rust-cli-development
+description: Expert Rust CLI application development covering project structure, error handling, argument parsing with clap, config management, file I/O, HTTP clients, cross-platform concerns, and distribution. Always trigger for any Rust CLI task — .rs files, Cargo.toml questions, clap usage, anyhow/thiserror, building terminal tools, single-binary apps, or any mention of writing a Rust command-line tool.
 ---
 
 # Rust CLI Development
